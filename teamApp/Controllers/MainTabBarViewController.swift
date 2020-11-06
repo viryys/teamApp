@@ -9,18 +9,7 @@ import UIKit
 
 class MainTabBarViewController: UITabBarController {
     
-    //MusicAlbum
-    let artistWithAlbums = ""
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-       //MusicAlbum
-        let albumTVC = viewControllers?.first as! AlbumsTableViewController
-        
-        
-    }
-    
+   
 
     /*
     // MARK: - Navigation
