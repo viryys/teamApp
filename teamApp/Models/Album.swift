@@ -8,10 +8,11 @@
 struct Album {
     let artist: String
     let nameAlbum: String
+    var isLike: Bool
 }
 
 extension Album {
-   
+   //func returns array of Artists with albums
     static func createDataAlbum() {
         let dataAlbum = AlbumDataManager.shared.artistsAlbums
         

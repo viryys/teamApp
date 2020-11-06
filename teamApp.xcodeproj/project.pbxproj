@@ -20,7 +20,6 @@
 		ABF2939925549D5800C997D7 /* ContactsListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF2939825549D5800C997D7 /* ContactsListTableViewController.swift */; };
 		F9A2BF7D25553E4D00787776 /* AlbumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A2BF7C25553E4D00787776 /* AlbumTableViewCell.swift */; };
 		F9A2BF80255542CD00787776 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A2BF7F255542CD00787776 /* Album.swift */; };
-		F9A2BF83255542DA00787776 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A2BF82255542DA00787776 /* Track.swift */; };
 		F9A2BF86255542EB00787776 /* AlbumDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A2BF85255542EA00787776 /* AlbumDataManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -40,7 +39,6 @@
 		ABF2939825549D5800C997D7 /* ContactsListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsListTableViewController.swift; sourceTree = "<group>"; };
 		F9A2BF7C25553E4D00787776 /* AlbumTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumTableViewCell.swift; sourceTree = "<group>"; };
 		F9A2BF7F255542CD00787776 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
-		F9A2BF82255542DA00787776 /* Track.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
 		F9A2BF85255542EA00787776 /* AlbumDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -113,7 +111,6 @@
 			isa = PBXGroup;
 			children = (
 				F9A2BF7F255542CD00787776 /* Album.swift */,
-				F9A2BF82255542DA00787776 /* Track.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -203,7 +200,6 @@
 				ABF2937525548FC300C997D7 /* AppDelegate.swift in Sources */,
 				ABF2937725548FC300C997D7 /* SceneDelegate.swift in Sources */,
 				F9A2BF7D25553E4D00787776 /* AlbumTableViewCell.swift in Sources */,
-				F9A2BF83255542DA00787776 /* Track.swift in Sources */,
 				ABF2939925549D5800C997D7 /* ContactsListTableViewController.swift in Sources */,
 				ABF2939325549BAC00C997D7 /* AlbumsTableViewController.swift in Sources */,
 				F9A2BF80255542CD00787776 /* Album.swift in Sources */,
@@ -364,7 +360,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.lider.teamApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -383,7 +379,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.lider.teamApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

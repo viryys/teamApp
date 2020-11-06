@@ -67,11 +67,11 @@ class AlbumDataManager {
                              "Queen + Adam Lambert Tour 2014–2015 (2014–2015)",
                              "Queen + Adam Lambert 2016 Summer Festival Tour (2016)",
                              "Queen + Adam Lambert Tour 2017–2018 (2017–2018)",
-                             "The Rhapsody Tour (2019–2021)"]
-                   
-                   
-                   
-    ]
+                             "The Rhapsody Tour (2019–2021)"]]
+    
+    let shortInfo = ["Sting": "Born: Gordon Matthew Thomas Sumner, 2 October 1951 (age 69), Wallsend, Northumberland, England. Years active: 1971–present. Musical career - Genres: Rockpopnew wavepost-punkskareggaejazzworldsoft rock. Website: sting.com",
+                     "Queen": "Origin: London, England. Genres: Rock. Website: queenonline.com . Members: Brian May, Roger Taylor. Past members: Freddie Mercury, John Deacon.",
+                     "Joe Cocker": "Birth name: John Robert Cocker. Born: 20 May 1944, Sheffield, West Riding of Yorkshire, England. Died: 22 December 2014 (aged 70). Crawford, Colorado, United States. Genres: Rock, blues, soul, pop. Years active: 1961–2014. Website: www.cocker.com", ]
     
     private init() { }
 }
