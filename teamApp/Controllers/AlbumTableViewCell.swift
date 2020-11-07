@@ -11,11 +11,13 @@ class AlbumTableViewCell: UITableViewCell {
 
     @IBOutlet weak var albumCellLabel: UILabel!
     @IBOutlet weak var infoOfAlbumCellLabel: UILabel!
-       
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.backgroundColor = .secondarySystemBackground
         
+        self.backgroundColor = .secondarySystemBackground
+        infoOfAlbumCellLabel.font = .systemFont(ofSize: 14)
+
     }
 
 }

@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Music albums-->
+        <!--Music-->
         <scene sceneID="J0o-p2-VWF">
             <objects>
                 <tableViewController id="B7H-fJ-8lM" customClass="AlbumsTableViewController" customModule="teamApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -76,7 +76,7 @@
                     <toolbarItems>
                         <barButtonItem title="Item" id="BzO-6R-HjU"/>
                     </toolbarItems>
-                    <navigationItem key="navigationItem" title="Music albums" id="59b-Se-YNo">
+                    <navigationItem key="navigationItem" id="59b-Se-YNo">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="vm3-B3-Nyl">
                             <connections>
                                 <segue destination="BYh-HY-0cy" kind="show" id="qbM-RJ-Jdy"/>
@@ -97,46 +97,42 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ZgV-NP-HWw">
-                                <rect key="frame" x="30" y="493" width="354" height="27.5"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="252" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x6Y-MJ-8U8">
-                                        <rect key="frame" x="0.0" y="0.0" width="354" height="27.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vr3-Ws-Rs1">
-                                <rect key="frame" x="30" y="100" width="354" height="343"/>
+                            <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Vr3-Ws-Rs1">
+                                <rect key="frame" x="54" y="108" width="306" height="680"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Q3X-Cb-3ML">
-                                        <rect key="frame" x="0.0" y="0.0" width="354" height="343"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="354" id="Qfd-kp-77r"/>
-                                            <constraint firstAttribute="height" constant="343" id="fIZ-EU-cfi"/>
-                                        </constraints>
+                                        <rect key="frame" x="0.0" y="0.0" width="306" height="488"/>
                                     </imageView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Lorem ipsum dolor sit er elit lamet, consectetaur " translatesAutoresizingMaskIntoConstraints="NO" id="d5v-L8-q0T">
+                                        <rect key="frame" x="0.0" y="496" width="306" height="184"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="184" id="dLG-OM-jSH"/>
+                                        </constraints>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="306" id="oLW-7n-nqp"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="yUE-Md-Slc"/>
-                        <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="ZgV-NP-HWw" firstAttribute="top" secondItem="Vr3-Ws-Rs1" secondAttribute="bottom" constant="50" id="88p-MS-gji"/>
-                            <constraint firstItem="Vr3-Ws-Rs1" firstAttribute="centerX" secondItem="MlX-gF-gds" secondAttribute="centerX" id="9cC-g3-X90"/>
-                            <constraint firstItem="Vr3-Ws-Rs1" firstAttribute="leading" secondItem="yUE-Md-Slc" secondAttribute="leading" constant="30" id="Iue-Yx-e8a"/>
-                            <constraint firstItem="yUE-Md-Slc" firstAttribute="trailing" secondItem="Vr3-Ws-Rs1" secondAttribute="trailing" constant="30" id="Oie-7o-vsI"/>
-                            <constraint firstItem="yUE-Md-Slc" firstAttribute="trailing" secondItem="ZgV-NP-HWw" secondAttribute="trailing" constant="30" id="QDP-es-Gx7"/>
-                            <constraint firstItem="ZgV-NP-HWw" firstAttribute="leading" secondItem="yUE-Md-Slc" secondAttribute="leading" constant="30" id="U94-V8-WTK"/>
-                            <constraint firstItem="Vr3-Ws-Rs1" firstAttribute="top" secondItem="MlX-gF-gds" secondAttribute="top" constant="100" id="kkG-nr-3cA"/>
+                            <constraint firstItem="Vr3-Ws-Rs1" firstAttribute="centerY" secondItem="MlX-gF-gds" secondAttribute="centerY" id="JDY-PI-k5a"/>
+                            <constraint firstItem="Vr3-Ws-Rs1" firstAttribute="top" secondItem="yUE-Md-Slc" secondAttribute="top" constant="20" id="SYY-xc-WfE"/>
+                            <constraint firstItem="Vr3-Ws-Rs1" firstAttribute="centerX" secondItem="MlX-gF-gds" secondAttribute="centerX" id="jc9-KE-otp"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="LoS-rh-plO"/>
+                    <navigationItem key="navigationItem" id="LoS-rh-plO">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="Cye-Xd-D9L"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="imageAlbum" destination="Q3X-Cb-3ML" id="NsE-TB-ewn"/>
-                        <outlet property="infoLabel" destination="x6Y-MJ-8U8" id="8G7-3k-zA0"/>
+                        <outlet property="textInfoView" destination="d5v-L8-q0T" id="N8B-kK-TMy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HYK-Rx-Fh4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -270,8 +266,8 @@
         <scene sceneID="cUX-04-FCx">
             <objects>
                 <navigationController id="yL3-DJ-IZB" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="1AT-R9-hCD">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1AT-R9-hCD">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -304,6 +300,12 @@
     </scenes>
     <resources>
         <image name="music.note.list" catalog="system" width="128" height="115"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemGroupedBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
