@@ -16,7 +16,6 @@ class AlbumsTableViewController: UITableViewController {
         super.viewDidLoad()
         navigationItem.title = "Albums"
         self.navigationItem.leftBarButtonItem = self.editButtonItem
-        
     }
 
     // MARK: - Table view data source
@@ -67,11 +66,16 @@ class AlbumsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
         
         let movevedAlbum = artistWithAlbums[sourceIndexPath.section].nameAlbum.remove(at: sourceIndexPath.row)
-        artistWithAlbums[destinationIndexPath.section].nameAlbum.insert(movevedAlbum, at: destinationIndexPath.row)
-        tableView.reloadData()
+        let ownerSection = sourceIndexPath.section
+        if ownerSection == destinationIndexPath.section {
+            artistWithAlbums[destinationIndexPath.section].nameAlbum.insert(movevedAlbum, at: destinationIndexPath.row)
+            tableView.reloadData()
+        } else {
+            artistWithAlbums[sourceIndexPath.section].nameAlbum.insert(movevedAlbum, at: destinationIndexPath.row)
+            tableView.reloadData()
+        }
     }
-    
-    
+        
     // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
