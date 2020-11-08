@@ -32,6 +32,16 @@ class AlbumDataManager {
                         "Queen I Tour": "Самой известной песней этого альбома является Bohemian Rhapsody — длинная шестиминутная композиция, соединившая в себе элементы рок- и поп-музыки, оперы и отдельные мотивы фольклора. Стандартной в те годы считалась трёхминутная песня, но Queen создали шестиминутную песню и сумели отправить её в радиоэфир.",
                         "Queen II Tour": "В октябре 1977 года вышла пластинка News of the World, в которой Queen впервые сделали шаг от сложных гармоний арт-рока в сторону упрощения и сдержанности звучания. Этот диск принёс группе три суперхита: We Will Rock You, Spread Your Wings и We Are the Champions, но в остальном был не столь успешен, дошёл до четвёртой строчки в Великобритании и третьей в США." ]
     
+    let yearsOfAlbum = ["The Dream of the Blue Turtles": "1978",
+                        "Nothing Like the Sun": "2002",
+                        "The Soul Cages": "1979 - 1981" ,
+                        "With a Little Help from My Friends": "2014",
+                        "Joe Cocker!": "1980 - 1986",
+                        "Joe Cocker - 1972": "1972",
+                        "Early Queen Tours": "1978 - 1984",
+                        "Queen I Tour": "2006 - 2009",
+                        "Queen II Tour": "2010 - 2014"]
+    
     
     private init() { }
 }

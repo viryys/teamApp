@@ -17,7 +17,6 @@ class AlbumTableViewCell: UITableViewCell {
         
         self.backgroundColor = .secondarySystemBackground
         infoOfAlbumCellLabel.font = .systemFont(ofSize: 14)
-
     }
 
 }
