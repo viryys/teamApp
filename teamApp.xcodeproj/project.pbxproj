@@ -22,6 +22,10 @@
 		ABF2939925549D5800C997D7 /* ContactsListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF2939825549D5800C997D7 /* ContactsListTableViewController.swift */; };
 		FA658BC62556AB8500276432 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA658BC52556AB8500276432 /* Users.swift */; };
 		FA658BCB2557E98000276432 /* startPageOfQuizTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA658BCA2557E98000276432 /* startPageOfQuizTableViewController.swift */; };
+		FA658BD0255830A800276432 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA658BCF255830A800276432 /* Question.swift */; };
+		FA658BD32558313900276432 /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA658BD22558313900276432 /* Answer.swift */; };
+		FA658BDA25583F3F00276432 /* QuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA658BD925583F3F00276432 /* QuestionsViewController.swift */; };
+		FA658BDD25583F5600276432 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA658BDC25583F5600276432 /* ResultsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +46,10 @@
 		ABF2939825549D5800C997D7 /* ContactsListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsListTableViewController.swift; sourceTree = "<group>"; };
 		FA658BC52556AB8500276432 /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
 		FA658BCA2557E98000276432 /* startPageOfQuizTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = startPageOfQuizTableViewController.swift; sourceTree = "<group>"; };
+		FA658BCF255830A800276432 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		FA658BD22558313900276432 /* Answer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
+		FA658BD925583F3F00276432 /* QuestionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsViewController.swift; sourceTree = "<group>"; };
+		FA658BDC25583F5600276432 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +102,8 @@
 				ABF2939825549D5800C997D7 /* ContactsListTableViewController.swift */,
 				AB252C722555971E000A09D4 /* QuizViewController.swift */,
 				FA658BCA2557E98000276432 /* startPageOfQuizTableViewController.swift */,
+				FA658BD925583F3F00276432 /* QuestionsViewController.swift */,
+				FA658BDC25583F5600276432 /* ResultsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -114,6 +124,8 @@
 			isa = PBXGroup;
 			children = (
 				FA658BC52556AB8500276432 /* Users.swift */,
+				FA658BCF255830A800276432 /* Question.swift */,
+				FA658BD22558313900276432 /* Answer.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -193,11 +205,15 @@
 			files = (
 				FA658BC62556AB8500276432 /* Users.swift in Sources */,
 				ABF2937925548FC300C997D7 /* ViewController.swift in Sources */,
+				FA658BDA25583F3F00276432 /* QuestionsViewController.swift in Sources */,
 				AB252C732555971E000A09D4 /* QuizViewController.swift in Sources */,
 				ABF2938D25549B1200C997D7 /* MainTabBarViewController.swift in Sources */,
 				ABF2937525548FC300C997D7 /* AppDelegate.swift in Sources */,
+				FA658BD32558313900276432 /* Answer.swift in Sources */,
+				FA658BD0255830A800276432 /* Question.swift in Sources */,
 				ABF2937725548FC300C997D7 /* SceneDelegate.swift in Sources */,
 				ABF2939925549D5800C997D7 /* ContactsListTableViewController.swift in Sources */,
+				FA658BDD25583F5600276432 /* ResultsViewController.swift in Sources */,
 				FA658BCB2557E98000276432 /* startPageOfQuizTableViewController.swift in Sources */,
 				ABF2939325549BAC00C997D7 /* AlbumsTableViewController.swift in Sources */,
 			);

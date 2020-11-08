@@ -34,6 +34,8 @@ class QuizViewController: UIViewController {
         }
     }
     
+    @IBAction func unwind(segue: UIStoryboardSegue) {}
+    
     @IBAction func logInPresed() {
         
         guard (userName.text == userOne.name && password.text == userOne.password) ||
