@@ -71,6 +71,7 @@ class AlbumsTableViewController: UITableViewController {
             artistWithAlbums[destinationIndexPath.section].nameAlbum.insert(movevedAlbum, at: destinationIndexPath.row)
             tableView.reloadData()
         } else {
+            alertMessage("Внимание", messageAlert: "Нельзя перенести альбом другому исполнителю!\nАльбом будет перемещен в пределах исполнителя!")
             artistWithAlbums[sourceIndexPath.section].nameAlbum.insert(movevedAlbum, at: destinationIndexPath.row)
             tableView.reloadData()
         }
@@ -101,3 +102,16 @@ class AlbumsTableViewController: UITableViewController {
     }
 }
 
+extension AlbumsTableViewController {
+    
+    private func alertMessage(_ titleAlert: String, messageAlert: String) {
+        let alertController = UIAlertController(title: titleAlert,
+                                                message: messageAlert,
+                                                preferredStyle: .alert)
+        
+        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertController.addAction(action)
+        
+        present(alertController, animated: true, completion: nil)
+    }
+}
