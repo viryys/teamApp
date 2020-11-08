@@ -9,7 +9,7 @@ import UIKit
 
 class AlbumsTableViewController: UITableViewController {
     
-    var artistWithAlbums = Album.createDataAlbum().sorted {  $1.artist > $0.artist  }
+    var artists = Artist.getArtists().sorted {  $1.name > $0.name  }
     let yearsAlbums = AlbumDataManager.shared.yearsOfAlbum
     
     override func viewDidLoad() {
@@ -22,29 +22,23 @@ class AlbumsTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        artistWithAlbums.count
+        artists.count
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        artistWithAlbums[section].nameAlbum.count
+        artists[section].albums.count
     }
 
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        artistWithAlbums[section].artist
+        artists[section].name
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellAlbum", for: indexPath) as! AlbumTableViewCell
-        //isLike[indexPath.section]?.append(indexPath.row)
-        let currentAlbum = artistWithAlbums[indexPath.section].nameAlbum[indexPath.row]
-        cell.albumCellLabel.text = currentAlbum
         
-        for (key, value) in yearsAlbums {
-            if key == currentAlbum {
-                cell.infoOfAlbumCellLabel.text = value
-                break
-            }
-        }
+        let currentAlbum = artists[indexPath.section].albums[indexPath.row]
+        cell.albumCellLabel.text = currentAlbum.nameAlbum
+        cell.infoOfAlbumCellLabel.text = currentAlbum.descrOnAlbum
         
         return cell
     }
@@ -55,7 +49,7 @@ class AlbumsTableViewController: UITableViewController {
    
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            artistWithAlbums[indexPath.section].nameAlbum.remove(at: indexPath.row)
+            artists[indexPath.section].albums.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
     }
@@ -66,11 +60,26 @@ class AlbumsTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
         
-        let movevedAlbum = artistWithAlbums[sourceIndexPath.section].nameAlbum.remove(at: sourceIndexPath.row)
-        artistWithAlbums[destinationIndexPath.section].nameAlbum.insert(movevedAlbum, at: destinationIndexPath.row)
+        let movevedAlbum = artists[sourceIndexPath.section].albums.remove(at: sourceIndexPath.row)
+        artists[destinationIndexPath.section].albums.insert(movevedAlbum, at: destinationIndexPath.row)
         tableView.reloadData()
     }
     
+    override func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let favorite = favoriteAction(at: indexPath)
+        return UISwipeActionsConfiguration(actions: [favorite])
+    }
+    
+    func favoriteAction(at indexPath: IndexPath) -> UIContextualAction {
+        let action = UIContextualAction(style: .destructive, title: "Like") { (action, view, complition) in
+         
+            self.artists[indexPath.section].albums[indexPath.row].isLike = !self.artists[indexPath.section].albums[indexPath.row].isLike
+            complition(true)
+        }
+        action.backgroundColor = artists[indexPath.section].albums[indexPath.row].isLike ? .systemPurple : .systemGray
+        action.image = UIImage(systemName: "heart")
+        return action
+    }
     
     // MARK: - Navigation
 
@@ -80,8 +89,8 @@ class AlbumsTableViewController: UITableViewController {
         
         let detailsVC = segue.destination as! AlbumDetailsViewController
         let indexPath = tableView.indexPathForSelectedRow!
-        detailsVC.indexPath = indexPath.row
-        detailsVC.album = artistWithAlbums[indexPath.section]
+        detailsVC.album = artists[indexPath.section].albums[indexPath.row]
+        detailsVC.artist = artists[indexPath.section]
     }
     
     // MARK: - IBActions
@@ -92,7 +101,7 @@ class AlbumsTableViewController: UITableViewController {
         let addNewElementVC = segue.source as! AlbumAddNewElementTableViewController        
         let newElement = addNewElementVC.newAlbum
         
-        artistWithAlbums.append(newElement)
+        artists.append(newElement)
         tableView.reloadData()
     }
 }

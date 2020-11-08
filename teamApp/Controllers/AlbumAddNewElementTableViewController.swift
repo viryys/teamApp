@@ -9,7 +9,8 @@ import UIKit
 
 class AlbumAddNewElementTableViewController: UITableViewController {
 
-    var newAlbum = Album(artist: "", nameAlbum: [""], isLike: false, shortInfo: "")
+    var newAlbum: Artist = Artist(name: "", shortInfo: "", albums: [])
+        //Album(artist: "", nameAlbum: [""], isLike: false, shortInfo: "")
     // MARK: - Outlets
     
     @IBOutlet weak var artistLabel: UITextField!
@@ -32,7 +33,8 @@ class AlbumAddNewElementTableViewController: UITableViewController {
         let album  = albumLabel.text ?? ""
         let descr = descrLabel.text ?? ""
         
-        self.newAlbum = Album(artist: artist, nameAlbum: [album], isLike: false, shortInfo: descr)
+        self.newAlbum = Artist(name: artist, shortInfo: "", albums: [
+                                AlbumNew(artist: artist, nameAlbum: album, isLike: false, descrOnAlbum: descr, yearsOfAlbum: "")])
         
     }
     

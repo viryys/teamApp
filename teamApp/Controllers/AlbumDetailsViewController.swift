@@ -9,9 +9,8 @@ import UIKit
 
 class AlbumDetailsViewController: UIViewController {
 
-    var album: Album!
-    let descrAlbum = AlbumDataManager.shared.descrOnAlbum
-    var indexPath: Int!
+    var album: AlbumNew!
+    var artist: Artist!
     
     @IBOutlet weak var imageAlbum: UIImageView!
     @IBOutlet weak var textInfoView: UITextView!
@@ -20,10 +19,10 @@ class AlbumDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        textInfoView.text = findDescriptionAlbum()
-        imageAlbum.image = UIImage(named: album.artist)
+        textInfoView.text = album.descrOnAlbum
+        imageAlbum.image = UIImage(named: artist.name)
         navigationItem.backBarButtonItem?.title = "Back"
-        setLabelToTitle(textLabel: album.artist)
+        setLabelToTitle(textLabel: artist.name)
     }
     
     private func setLabelToTitle(textLabel: String)  {
@@ -38,18 +37,6 @@ class AlbumDetailsViewController: UIViewController {
         titleLabel.textAlignment = .center
         titleLabel.text = textLabel
         navigationItem.titleView = titleLabel
-    }
-    
-    private func findDescriptionAlbum() -> String {
-        var string = album.shortInfo
-        
-        for (key, value) in descrAlbum {            
-            if key == album.nameAlbum[indexPath] {
-                string = value
-                return string
-            }
-        }
-        return string
     }
     
 }
