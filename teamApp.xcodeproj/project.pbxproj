@@ -115,7 +115,6 @@
 			children = (
 				F933C2802555D213004DA3F3 /* AlbumAddNewElementTableViewController.swift */,
 				F933C27B2555B10A004DA3F3 /* AlbumDetailsViewController.swift */,
-				ABF2939225549BAC00C997D7 /* AlbumsTableViewController.swift */,
 				F9A2BF7C25553E4D00787776 /* AlbumTableViewCell.swift */,
 				ABF2937825548FC300C997D7 /* ViewController.swift */,
 				ABF2938C25549B1200C997D7 /* MainTabBarViewController.swift */,
@@ -123,7 +122,6 @@
 				ABF2939825549D5800C997D7 /* ContactsListTableViewController.swift */,
 				ABDCF76125574F640036BCAD /* DetailInfoContactViewController.swift */,
 				ABDCF769255762A50036BCAD /* AddContactViewController.swift */,
-				ABDCF75E255745960036BCAD /* PersonContact.swift */,
 				AB252C722555971E000A09D4 /* QuizViewController.swift */,
 				FA658BCA2557E98000276432 /* startPageOfQuizTableViewController.swift */,
 				FA658BD925583F3F00276432 /* QuestionsViewController.swift */,
@@ -135,7 +133,6 @@
 		ABF2938A25549A1600C997D7 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				ABF2938F25549B6400C997D7 /* Albums.storyboard */,
 				ABF2937F25548FC500C997D7 /* LaunchScreen.storyboard */,
 				ABF2937A25548FC300C997D7 /* Main.storyboard */,
 				ABF2938F25549B6400C997D7 /* Albums.storyboard */,
@@ -149,9 +146,10 @@
 			isa = PBXGroup;
 			children = (
 				F9A2BF7F255542CD00787776 /* Album.swift */,
-        FA658BC52556AB8500276432 /* Users.swift */,
-        FA658BCF255830A800276432 /* Question.swift */,
-        FA658BD22558313900276432 /* Answer.swift */,
+				FA658BD22558313900276432 /* Answer.swift */,
+				FA658BCF255830A800276432 /* Question.swift */,
+				ABDCF75E255745960036BCAD /* PersonContact.swift */,
+				FA658BC52556AB8500276432 /* Users.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
