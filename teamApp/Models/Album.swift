@@ -54,37 +54,3 @@ struct AlbumNew {
     let descrOnAlbum: String
     let yearsOfAlbum: String
 }
-
-
-struct Album {
-    let artist: String
-    var nameAlbum: [String]
-    var isLike: Bool
-    let shortInfo: String
-//    let descrOnAlbum: String
-//    let yearsOfAlbum: String
-
-}
-
-extension Album {
-    //func will return array with Artists and albums
-    static func createDataAlbum() -> [Album] {
-        var albums: [Album] = []
-        let dataAlbum = AlbumDataManager.shared.artistsAlbums
-        let shortInfo = AlbumDataManager.shared.shortInfo
-        
-        dataAlbum.forEach { (key, values) in
-          
-            for (keyInfo, infoOfArtist) in shortInfo {
-                if key == keyInfo {
-                    let album = Album(artist: key,
-                                      nameAlbum: values,
-                                      isLike: false,
-                                      shortInfo: infoOfArtist)
-                    albums.append(album)
-                }
-            }
-        }
-        return albums
-    }
-}

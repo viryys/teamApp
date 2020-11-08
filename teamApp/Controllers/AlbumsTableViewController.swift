@@ -9,8 +9,6 @@ import UIKit
 
 class AlbumsTableViewController: UITableViewController {
     
-    var artistWithAlbums = Album.createDataAlbum().sorted {  $1.artist > $0.artist  }
-    
     var artists = Artist.getArtists().sorted {  $1.name > $0.name  }
     let yearsAlbums = AlbumDataManager.shared.yearsOfAlbum
     
@@ -67,6 +65,21 @@ class AlbumsTableViewController: UITableViewController {
         tableView.reloadData()
     }
     
+    override func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let favorite = favoriteAction(at: indexPath)
+        return UISwipeActionsConfiguration(actions: [favorite])
+    }
+    
+    func favoriteAction(at indexPath: IndexPath) -> UIContextualAction {
+        let action = UIContextualAction(style: .destructive, title: "Like") { (action, view, complition) in
+         
+            self.artists[indexPath.section].albums[indexPath.row].isLike = !self.artists[indexPath.section].albums[indexPath.row].isLike
+            complition(true)
+        }
+        action.backgroundColor = artists[indexPath.section].albums[indexPath.row].isLike ? .systemPurple : .systemGray
+        action.image = UIImage(systemName: "heart")
+        return action
+    }
     
     // MARK: - Navigation
 
