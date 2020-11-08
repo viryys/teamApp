@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB252C702555965D000A09D4 /* Quiz.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB252C6F2555965D000A09D4 /* Quiz.storyboard */; };
+		AB252C732555971E000A09D4 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB252C722555971E000A09D4 /* QuizViewController.swift */; };
 		ABDCF75F255745960036BCAD /* PersonContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDCF75E255745960036BCAD /* PersonContact.swift */; };
 		ABDCF76225574F640036BCAD /* DetailInfoContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDCF76125574F640036BCAD /* DetailInfoContactViewController.swift */; };
 		ABDCF76A255762A50036BCAD /* AddContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDCF769255762A50036BCAD /* AddContactViewController.swift */; };
@@ -21,9 +23,16 @@
 		ABF2939325549BAC00C997D7 /* AlbumsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF2939225549BAC00C997D7 /* AlbumsTableViewController.swift */; };
 		ABF2939625549CFF00C997D7 /* Contacts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABF2939525549CFF00C997D7 /* Contacts.storyboard */; };
 		ABF2939925549D5800C997D7 /* ContactsListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF2939825549D5800C997D7 /* ContactsListTableViewController.swift */; };
+		F933C27C2555B10A004DA3F3 /* AlbumDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F933C27B2555B10A004DA3F3 /* AlbumDetailsViewController.swift */; };
+		F933C2812555D213004DA3F3 /* AlbumAddNewElementTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F933C2802555D213004DA3F3 /* AlbumAddNewElementTableViewController.swift */; };
+		F9A2BF7D25553E4D00787776 /* AlbumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A2BF7C25553E4D00787776 /* AlbumTableViewCell.swift */; };
+		F9A2BF80255542CD00787776 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A2BF7F255542CD00787776 /* Album.swift */; };
+		F9A2BF86255542EB00787776 /* AlbumDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A2BF85255542EA00787776 /* AlbumDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AB252C6F2555965D000A09D4 /* Quiz.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Quiz.storyboard; sourceTree = "<group>"; };
+		AB252C722555971E000A09D4 /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
 		ABDCF75E255745960036BCAD /* PersonContact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonContact.swift; sourceTree = "<group>"; };
 		ABDCF76125574F640036BCAD /* DetailInfoContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInfoContactViewController.swift; sourceTree = "<group>"; };
 		ABDCF769255762A50036BCAD /* AddContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactViewController.swift; sourceTree = "<group>"; };
@@ -40,6 +49,11 @@
 		ABF2939225549BAC00C997D7 /* AlbumsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsTableViewController.swift; sourceTree = "<group>"; };
 		ABF2939525549CFF00C997D7 /* Contacts.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Contacts.storyboard; sourceTree = "<group>"; };
 		ABF2939825549D5800C997D7 /* ContactsListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsListTableViewController.swift; sourceTree = "<group>"; };
+		F933C27B2555B10A004DA3F3 /* AlbumDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailsViewController.swift; sourceTree = "<group>"; };
+		F933C2802555D213004DA3F3 /* AlbumAddNewElementTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumAddNewElementTableViewController.swift; sourceTree = "<group>"; };
+		F9A2BF7C25553E4D00787776 /* AlbumTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumTableViewCell.swift; sourceTree = "<group>"; };
+		F9A2BF7F255542CD00787776 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		F9A2BF85255542EA00787776 /* AlbumDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +86,8 @@
 		ABF2937325548FC300C997D7 /* teamApp */ = {
 			isa = PBXGroup;
 			children = (
+				F9A2BF7A2554A68400787776 /* Services */,
+				F9A2BF792554A36500787776 /* Models */,
 				ABF29389255499E000C997D7 /* Controllers */,
 				ABF2938A25549A1600C997D7 /* Storyboards */,
 				ABF2937425548FC300C997D7 /* AppDelegate.swift */,
@@ -85,13 +101,17 @@
 		ABF29389255499E000C997D7 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				F933C2802555D213004DA3F3 /* AlbumAddNewElementTableViewController.swift */,
+				F933C27B2555B10A004DA3F3 /* AlbumDetailsViewController.swift */,
+				ABF2939225549BAC00C997D7 /* AlbumsTableViewController.swift */,
+				F9A2BF7C25553E4D00787776 /* AlbumTableViewCell.swift */,
 				ABF2937825548FC300C997D7 /* ViewController.swift */,
 				ABF2938C25549B1200C997D7 /* MainTabBarViewController.swift */,
-				ABF2939225549BAC00C997D7 /* AlbumsTableViewController.swift */,
 				ABF2939825549D5800C997D7 /* ContactsListTableViewController.swift */,
 				ABDCF76125574F640036BCAD /* DetailInfoContactViewController.swift */,
 				ABDCF769255762A50036BCAD /* AddContactViewController.swift */,
 				ABDCF75E255745960036BCAD /* PersonContact.swift */,
+				AB252C722555971E000A09D4 /* QuizViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -99,12 +119,29 @@
 		ABF2938A25549A1600C997D7 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				ABF2938F25549B6400C997D7 /* Albums.storyboard */,
 				ABF2937F25548FC500C997D7 /* LaunchScreen.storyboard */,
 				ABF2937A25548FC300C997D7 /* Main.storyboard */,
-				ABF2938F25549B6400C997D7 /* Albums.storyboard */,
 				ABF2939525549CFF00C997D7 /* Contacts.storyboard */,
+				AB252C6F2555965D000A09D4 /* Quiz.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		F9A2BF792554A36500787776 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F9A2BF7F255542CD00787776 /* Album.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F9A2BF7A2554A68400787776 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				F9A2BF85255542EA00787776 /* AlbumDataManager.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,6 +206,7 @@
 				ABF2939625549CFF00C997D7 /* Contacts.storyboard in Resources */,
 				ABF2937E25548FC500C997D7 /* Assets.xcassets in Resources */,
 				ABF2937C25548FC300C997D7 /* Main.storyboard in Resources */,
+				AB252C702555965D000A09D4 /* Quiz.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,14 +218,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABF2937925548FC300C997D7 /* ViewController.swift in Sources */,
+				AB252C732555971E000A09D4 /* QuizViewController.swift in Sources */,
 				ABF2938D25549B1200C997D7 /* MainTabBarViewController.swift in Sources */,
+				F933C27C2555B10A004DA3F3 /* AlbumDetailsViewController.swift in Sources */,
+				F933C2812555D213004DA3F3 /* AlbumAddNewElementTableViewController.swift in Sources */,
 				ABDCF76225574F640036BCAD /* DetailInfoContactViewController.swift in Sources */,
 				ABDCF76A255762A50036BCAD /* AddContactViewController.swift in Sources */,
 				ABF2937525548FC300C997D7 /* AppDelegate.swift in Sources */,
 				ABF2937725548FC300C997D7 /* SceneDelegate.swift in Sources */,
+				F9A2BF7D25553E4D00787776 /* AlbumTableViewCell.swift in Sources */,
 				ABF2939925549D5800C997D7 /* ContactsListTableViewController.swift in Sources */,
 				ABDCF75F255745960036BCAD /* PersonContact.swift in Sources */,
 				ABF2939325549BAC00C997D7 /* AlbumsTableViewController.swift in Sources */,
+				F9A2BF80255542CD00787776 /* Album.swift in Sources */,
+				F9A2BF86255542EB00787776 /* AlbumDataManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
