@@ -8,21 +8,26 @@
 import UIKit
 
 class AlbumDetailsViewController: UIViewController {
-
+    @IBOutlet weak var imageAlbum: UIImageView!
+    @IBOutlet weak var textInfoView: UITextView!
+    @IBOutlet weak var yearAlbum: UILabel!
+    @IBOutlet weak var artistNameLabel: UILabel!
+    @IBOutlet weak var artistInfoTextView: UITextView!
+    
     var album: AlbumNew!
     var artist: Artist!
     
-    @IBOutlet weak var imageAlbum: UIImageView!
-    @IBOutlet weak var textInfoView: UITextView!
-    
-        
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        textInfoView.text = album.descrOnAlbum
-        imageAlbum.image = UIImage(named: artist.name)
+        setLabelToTitle(textLabel: "\(album.isLike ? "♥" : "♡") \(album.nameAlbum)")
         navigationItem.backBarButtonItem?.title = "Back"
-        setLabelToTitle(textLabel: artist.name)
+        
+        imageAlbum.image = UIImage(named: artist.name)
+        textInfoView.text = album.descrOnAlbum
+        yearAlbum.text = "Release year: \(album.yearsOfAlbum)"
+        artistNameLabel.text = album.artist
+        artistInfoTextView.text = artist.shortInfo
     }
     
     private func setLabelToTitle(textLabel: String)  {
