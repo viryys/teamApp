@@ -7,19 +7,16 @@
 
 import Foundation
 
-struct Users {
+struct User {
     let name: String
     let password: String
-    
-    static func logInUserOne() -> Users {
-        Users(name: "Alex", password: "easy")
-    }
-    
-    static func logInUserTwo() -> Users {
-        Users(name: "Tim", password: "hard")
-    }
-    
-    static func loginFalse() -> Users {
-        Users(name:"", password: "")
+}
+
+extension User {
+    static func getUsers() -> [User] {
+        [
+            User(name: "Alex", password: "easy"),
+            User(name: "Tim", password: "hard")
+        ]
     }
 }

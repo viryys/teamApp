@@ -10,8 +10,9 @@ import UIKit
 class startPageOfQuizTableViewController: UIViewController {
 
     @IBOutlet var userNameLog: UILabel!
+    @IBOutlet weak var startQuizButton: UIButton!
     
-    var user: Users!
+    var currentUser: User!
 
     private let primaryColor = UIColor(
         red: 210/255,
@@ -29,10 +30,21 @@ class startPageOfQuizTableViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         addVerticalGradientLayer(topColor: primaryColor, bottomColor: secondaryColor)
-        userNameLog.text = "Welcome🖐, \(user.name)"
+        userNameLog.text = "Welcome🖐, \(currentUser.name)"
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let nav = segue.destination as! UINavigationController
+        let startQuizVC = nav.topViewController as! QuestionsViewController
+        
+        startQuizVC.currentUser = currentUser
+        
     }
     
     //@IBAction override func unwind(segue: UIStoryboardSegue) {}
+    @IBAction func startQuizPressed(_ sender: Any) {
+        performSegue(withIdentifier: "startQuiz", sender: nil)
+    }
 }
 
 extension startPageOfQuizTableViewController {

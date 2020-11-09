@@ -31,7 +31,7 @@ class QuestionsViewController: UIViewController {
     
     @IBOutlet var multipleSwitches: [UISwitch]!
     
-    
+    var currentUser: User!
     
     private let questions = Question.getQuestions()
     private var questionIndex = 0
@@ -42,6 +42,8 @@ class QuestionsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         updateUI()
+        
+        print("currentUser", currentUser);
     }
     
     

@@ -14,8 +14,10 @@ class QuizViewController: UIViewController {
     
     @IBOutlet var logInButton: UIButton!
     
-    let userOne = Users.logInUserOne()
-    let userTwo = Users.logInUserTwo()
+    let users = User.getUsers()
+    var currentUser = User(name: "", password: "")
+//    let userOne = Users.logInUserOne()
+//    let userTwo = Users.logInUserTwo()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,23 +25,23 @@ class QuizViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let startPageOfviewController = segue.destination as! startPageOfQuizTableViewController
+        let startQuizviewController = segue.destination as! startPageOfQuizTableViewController
         
-        switch userName.text {
-        case userOne.name:
-            startPageOfviewController.user = Users.logInUserOne()
-        case userTwo.name:
-            startPageOfviewController.user = Users.logInUserTwo()
-        default:  startPageOfviewController.user = Users.loginFalse()
-        }
+        startQuizviewController.currentUser = currentUser
+        
     }
     
     @IBAction func unwind(segue: UIStoryboardSegue) {}
     
     @IBAction func logInPresed() {
         
-        guard (userName.text == userOne.name && password.text == userOne.password) ||
-                (userName.text == userTwo.name && password.text == userTwo.password)
+        users.forEach {
+            userData in
+            if (userName.text == userData.name && password.text == userData.password) {
+                currentUser = userData
+            }
+        }
+        guard (currentUser.name != "")
         else {showAlert(with: "Invalid login or password", and: "Please, enter correct login and password", textField: password)
             return
         }
@@ -47,11 +49,11 @@ class QuizViewController: UIViewController {
     }
     
     @IBAction func showUserNames(_ sender: Any) {
-        showAlert(with: "Ooops", and: "Your first name is \(userOne.name), your second name is \(userTwo.name)")
+        showAlert(with: "Ooops", and: "Your first name is \(users.first!.name), your second name is \(users.last!.name)")
     }
     
     @IBAction func showUserPasswords(_ sender: Any) {
-        showAlert(with: "Ooops", and: "Your first password is \(userOne.password), your second password is \(userTwo.password)")
+        showAlert(with: "Ooops", and: "Your first password is \(users.first!.password), your second password is \(users.last!.password)")
     }
 }
 
