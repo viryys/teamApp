@@ -31,7 +31,11 @@ class QuizViewController: UIViewController {
         
     }
     
-    @IBAction func unwind(segue: UIStoryboardSegue) {}
+    @IBAction func unwind(segue: UIStoryboardSegue) {
+        currentUser = User(name: "", password: "")
+        userName.text = ""
+        password.text = ""
+    }
     
     @IBAction func logInPresed() {
         

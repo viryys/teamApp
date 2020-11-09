@@ -13,10 +13,14 @@ class ResultsViewController: UIViewController {
     @IBOutlet var descriptionLabel: UILabel!
     
     var answers: [Answer]!
+    var currenUser: User!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         navigationItem.hidesBackButton = true
+        
+        print("answers", answers)
         
         updateResult()
     }
@@ -44,7 +48,9 @@ extension ResultsViewController {
         }
     
     private func updateUI(with car: carType?) {
-        carTipeLabel.text = "Твоя машина - \(car?.rawValue ?? "🚗")!"
+        carTipeLabel.text = currenUser.name == "Tim" ?
+        "Твой телефон - \(car?.rawValue ?? "☎️")!" :
+        "Твоя машина - \(car?.rawValue ?? "🚗")!"
         descriptionLabel.text = car?.definition ?? ""
     }
     
