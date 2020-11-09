@@ -20,8 +20,6 @@ class ResultsViewController: UIViewController {
 
         navigationItem.hidesBackButton = true
         
-        print("answers", answers)
-        
         updateResult()
     }
     
