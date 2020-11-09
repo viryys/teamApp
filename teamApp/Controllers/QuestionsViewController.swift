@@ -15,6 +15,7 @@ class QuestionsViewController: UIViewController {
         didSet {
             let answerCount = Float(currentAnswers.count - 1)
             rangedSlider.value = answerCount
+            rangedSlider.maximumValue = answerCount
         }
     }
     
@@ -31,9 +32,9 @@ class QuestionsViewController: UIViewController {
     
     @IBOutlet var multipleSwitches: [UISwitch]!
     
+    var currentUser: User!
     
-    
-    private let questions = Question.getQuestions()
+    private var questions = Question.getQuestionsCar()
     private var questionIndex = 0
     private var answersChoosen: [Answer] = []
     private var currentAnswers: [Answer] {
@@ -41,7 +42,14 @@ class QuestionsViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        if (currentUser.name == "Tim") {
+            self.questions = Question.getQuestionsPhone()
+        }
+        
         updateUI()
+        
     }
     
     
@@ -71,6 +79,7 @@ class QuestionsViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let resultVC = segue.destination as! ResultsViewController
         resultVC.answers = answersChoosen
+        resultVC.currenUser = currentUser
     }
     
 }

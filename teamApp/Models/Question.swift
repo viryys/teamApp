@@ -18,7 +18,7 @@ struct Question {
 }
 
 extension Question {
-    static func getQuestions() -> [Question] {
+    static func getQuestionsCar() -> [Question] {
         return [
             Question(
                 text: "Какую скорость вы предпочитаете?",
@@ -48,6 +48,41 @@ extension Question {
                     Answer(text: "От 500.000-2.000.000р", type: .volvo),
                     Answer(text: "От 2.000.000-10.500.00р", type: .bmw),
                     Answer(text: "Свыше 15.000.000р", type: .ferrari)
+                ]
+            )
+        ]
+    }
+    
+    static func getQuestionsPhone() -> [Question] {
+        return [
+            Question(
+                text: "Как часто вы пользуютесь телефоном?",
+                type: .single,
+                answers: [
+                    Answer(text: "Редко", type: .buttonPhone),
+                    Answer(text: "Пару часов в день", type: .Nokia),
+                    Answer(text: "Пол дня ", type: .Samsung),
+                    Answer(text: "Сутки напролет", type: .Iphone)
+                ]
+            ),
+            Question(
+                text: "Какие функции часто используешь в телефоне?",
+                type: .multiple,
+                answers: [
+                    Answer(text: "Только звонки", type: .buttonPhone),
+                    Answer(text: "Колоть орехи", type: .Nokia),
+                    Answer(text: "Смотреть Ютуб", type: .Samsung),
+                    Answer(text: "Сидеть в Инстаграм", type: .Iphone)
+                ]
+            ),
+            Question(
+                text: "какая стоимость телефона тебе подходит по бюджету?",
+                type: .ranged,
+                answers: [
+                    Answer(text: "До 1.000р", type: .buttonPhone),
+                    Answer(text: "От 1.000р - 8.000р", type: .Nokia),
+                    Answer(text: "От 30.000 - 80.000р", type: .Samsung),
+                    Answer(text: "Свыше 80.000р", type: .Iphone)
                 ]
             )
         ]

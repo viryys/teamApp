@@ -2,8 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3b0-bZ-U6u">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -143,7 +142,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="Начать опрос"/>
                                 <connections>
-                                    <segue destination="VPA-Pk-yXW" kind="presentation" modalPresentationStyle="fullScreen" id="nsu-RU-yl5"/>
+                                    <action selector="startQuizPressed:" destination="ydj-cB-vRg" eventType="touchUpInside" id="Lhm-Wl-s4V"/>
+                                    <segue destination="VPA-Pk-yXW" kind="presentation" identifier="startQuiz" modalPresentationStyle="fullScreen" id="nsu-RU-yl5"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TMJ-WT-or0">
@@ -167,6 +167,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="startQuizButton" destination="7Ty-NL-wgx" id="0BG-8e-RVn"/>
                         <outlet property="userNameLog" destination="TMJ-WT-or0" id="dVU-oD-pfL"/>
                     </connections>
                 </viewController>
