@@ -53,3 +53,53 @@ extension Question {
         ]
     }
 }
+
+
+enum ResponseTypeSecond {
+    case single
+    case multiple
+    case ranged
+}
+
+struct QuestionSecond {
+    let text: String
+    let type: phoneType
+    let answers: [AnswerSecond]
+}
+
+//extension QuestionSecond {
+//    static func getQuestionsSecond() -> [QuestionSecond] {
+//        return [
+//            QuestionSecond(
+//                text: "Как часто вы пользуютесь телефоном?",
+//                type: .single,
+//                answers: [
+//                    AnswerSecond(text: "Редко", type: .buttonPhone),
+//                    AnswerSecond(text: "Пару часов в день", type: .Nokia),
+//                    AnswerSecond(text: "Пол дня ", type: .Samsung),
+//                    AnswerSecond(text: "Сутки напролет", type: .Iphone)
+//                ]
+//            ),
+//            QuestionSecond(
+//                text: "Какие функции часто используешь в телефоне?",
+//                type: .multiple,
+//                answers: [
+//                    AnswerSecond(text: "Только звонки", type: .buttonPhone),
+//                    AnswerSecond(text: "Колоть орехи", type: .Nokia),
+//                    AnswerSecond(text: "Смотреть Ютуб", type: .Samsung),
+//                    AnswerSecond(text: "Сидеть в Инстаграм", type: .Iphone)
+//                ]
+//            ),
+//            QuestionSecond(
+//                text: "какая стоимость телефона тебе подходит по бюджету?",
+//                type: .ranged,
+//                answers: [
+//                    AnswerSecond(text: "До 1.000р", type: .buttonPhone),
+//                    AnswerSecond(text: "От 1.000р - 8.000р", type: .Nokia),
+//                    AnswerSecond(text: "От 30.000 - 80.000р", type: .Samsung),
+//                    AnswerSecond(text: "Свыше 80.000р", type: .Iphone)
+//                ]
+//            )
+//        ]
+//    }
+//}

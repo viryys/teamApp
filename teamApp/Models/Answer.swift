@@ -29,3 +29,29 @@ enum carType: Character {
         }
     }
 }
+
+
+struct AnswerSecond {
+    let text: String
+    let type: phoneType
+}
+
+enum phoneType: Character {
+    case buttonPhone = "☎️"
+    case  Nokia = "📞"
+    case Samsung = "📲"
+    case Iphone = "📱"
+    
+    var definition: String {
+        switch self {
+        case .buttonPhone:
+            return "Тебе подходит любой кнопочный телефон - то, что по-проще и и где есть кнопки.. "
+        case .Nokia:
+            return "Тебе подходит Nokia - надежный, качесвтенный телефон-легенда"
+        case .Samsung:
+            return "Твой телефон Sumsung! Лидер Российского рынка!"
+        case .Iphone:
+            return "Тебе подходит  Iphone ! Стильный , мощный и дорогой гаджет! "
+        }
+    }
+}
